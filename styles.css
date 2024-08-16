@@ -1,0 +1,252 @@
+:root {
+  --color-texto: #0a3871;
+  --bg-color: #f3f5fc;
+  --btn-color: #d8dfe8;
+  --blue: #007bff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url("./public/supa.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: repeat-y;
+  height: 100vh;
+  font-family: "Inter", monospace, Verdana, Geneva, Tahoma;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 2rem;
+}
+
+.header__container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__container #logo {
+  width: 7%;
+  height: auto;
+  margin: 1rem 2rem;
+}
+
+.header__container #title {
+  color: #fff;
+  font-size: medium;
+  margin: 1rem 2rem;
+}
+
+@media screen and (width >= 900px) {
+  .header__container #logo {
+    width: 2.5%;
+  }
+  .header__container #title {
+    font-size: larger;
+  }
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  /* background-color: aqua; */
+  width: 95%;
+  margin: 1rem 2rem;
+}
+
+@media screen and (width >= 900px) {
+  .container {
+    flex-direction: row;
+  }
+}
+
+.shadow {
+  box-shadow: 2px 16px 18px -5px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 2px 16px 18px -5px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 2px 16px 18px -5px rgba(0, 0, 0, 0.3);
+}
+
+.container .container__entrada {
+  box-sizing: border-box;
+  /* background-color: green; */
+  width: 90%;
+  text-align: center;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.wrapperblur {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.95);
+
+  /* Fondo blanco semitransparente */
+  backdrop-filter: blur(5px); /*Aplica el efecto de blur */
+  /*border: 1px solid rgba(255, 255, 255, 0.5);  Bordes transparentes */
+  border-radius: 10px; /* Bordes redondeados opcionales */
+  margin-bottom: 20px;
+}
+
+.container__entrada textarea {
+  padding-top: 1rem;
+  padding-left: 1rem;
+  resize: none;
+  font-size: 1.3rem;
+  width: 100%;
+  height: 150px;
+  color: #fff;
+  background-color: transparent;
+  border: 0;
+  border-radius: 10px; /* Bordes redondeados opcionales */
+  outline: none;
+}
+
+@media screen and (width >= 900px) {
+  .wrapperblur {
+    height: 370px;
+  }
+}
+
+.container__entrada textarea::placeholder {
+  letter-spacing: 0.2rem;
+  font-family: "Inter", Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  color: #fff;
+}
+.container__entrada p {
+  color: var(--bg-color);
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+@media screen and (width >= 900px) {
+  .container__entrada p {
+    font-size: 1.4rem;
+  }
+}
+
+.container__entrada .contenedor__entrada__botones {
+  display: flex;
+  justify-content: center;
+  gap: 1.7rem;
+}
+
+button {
+  transition: transform 0.1s;
+  cursor: pointer;
+}
+
+button:hover {
+  transform: scale(1.3);
+}
+.button_style {
+  background-color: var(--blue);
+  border-radius: 4px;
+  padding: 12px 18px;
+  border: none;
+  color: var(--bg-color);
+}
+
+.contenedor__resultado {
+  width: 85%;
+  background-color: var(--btn-color);
+  padding: 1rem;
+
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (width >= 900px) {
+  .contenedor__resultado {
+    height: 400px;
+  }
+}
+.contenedor__resultado .no__message {
+  height: 40%;
+  margin-block: auto;
+  padding-inline: 1rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.with__message {
+  display: flex;
+  align-items: center;
+  height: auto;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+@media screen and (width >= 900px) {
+  .with__message {
+    height: 100%;
+  }
+}
+
+.with__message p {
+  color: var(--bg-color);
+  text-align: start;
+  letter-spacing: 0.05rem;
+}
+.message__container {
+  overflow: auto;
+}
+
+/* .with__message .button__container {
+  width: 100%;
+  margin-top: 2rem;
+} */
+
+.with__message button {
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.no__message span {
+  font-weight: bold;
+  color: var(--color-texto);
+  margin-bottom: 1rem;
+}
+
+.no__message p {
+  font-size: 0.9rem;
+  opacity: 0.7;
+  color: var(--bg-color);
+}
+@media screen and (width >= 900px) {
+  .no__message span {
+    font-size: 1.3rem;
+  }
+
+  .no__message p {
+    font-size: 1.1rem;
+  }
+}
+footer {
+  margin-top: 2rem;
+}
+
+footer p {
+  color: var(--bg-color);
+}
+footer p span {
+  font-weight: bold;
+}
+
+@supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+  .wrapperblur {
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.4);
+  }
+}

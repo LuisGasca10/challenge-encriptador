@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Encriptador</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="header__container">
+      <img id="logo" src="public/Logo.png" alt="Logo Alura" />
+      <h1 id="title" class="header__texto">Encriptador - Challenge</h1>
+    </header>
+    <main class="container">
+      <section class="container__entrada">
+        <p>Solo letras minusculas y sin acentos</p>
+        <div class="wrapperblur shadow">
+          <textarea
+            name="textarea"
+            id="entradaTexto"
+            placeholder="Ingrese texto aqui"
+          ></textarea>
+        </div>
+
+        <div class="contenedor__entrada__botones">
+          <button class="button_style shadow" id="btn_encriptar" type="button">
+            Encriptar
+          </button>
+          <button
+            class="button_style shadow"
+            id="btn_desencriptar"
+            type="button"
+          >
+            Desencriptar
+          </button>
+        </div>
+      </section>
+
+      <section class="contenedor__resultado wrapperblur shadow">
+        <div class="no__message">
+          <span>Ningún mensaje fue encontrado</span>
+
+          <p>Ingrese el texto que desees encriptar o desencriptar</p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Hecho por: <span>Guillermo Gasca</span></p>
+    </footer>
+    <script src="./app.js"></script>
+  </body>
+</html>
